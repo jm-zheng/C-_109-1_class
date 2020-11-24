@@ -65,6 +65,9 @@ int main(){
 	
 	
 /*	//--------動態記憶體配置--------------
+	int  *var =new int(100);
+	cout <<"*var: "<< *var<<endl;
+	
 	int arr[10] ,*x;
 	x =new int [15];
 	
