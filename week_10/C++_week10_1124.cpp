@@ -216,27 +216,34 @@ Node_HW *delete_HW(Node_HW *head)
 	Node_HW *current =head;
 	Node_HW *fin_node ;
 	int i=0;
-	while(current -> next !=NULL)
-	{	
-		i++;
-		fin_node= current;
-		current =current ->next;
-	}
-	cout<<"delete data."<<"name:" <<current ->name <<"  mid:" <<current -> mid <<"  fin:"
-		<<current->final<<endl;
+	if(head != NULL)
+	{
+		while(current -> next !=NULL)
+		{	
+			i++;
+			fin_node= current;
+			current =current ->next;
+		}
+		cout<<"delete data."<<"name:" <<current ->name <<"  mid:" <<current -> mid <<"  fin:"
+			<<current->final<<endl;
         if(i>=1)
         {
         	fin_node ->next = NULL;
-			delete[] current ;
+			delete current ;
 			return head;
 		} 
 		else
 		{
-			fin_node ->next = NULL;
-			delete current ;
 			head = NULL;
+			delete current ;
 			return head;
 		}
+	}
+	else if(head == NULL)
+	{
+		cout << "head : NULL"<<endl;
+		return head;
+	}
 	
 		
 }
