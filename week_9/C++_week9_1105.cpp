@@ -8,7 +8,7 @@ int Fs(int x) ;
 void com(int *src, int n, int value);
 int bubble_sort_2(int arr[], int size);
 
-void bubble_sort( int arr[]  ,int size)
+/*void bubble_sort( int arr[]  ,int size)
 {
 	for(int i=0;i<size-1 ;i++)
 	{
@@ -29,8 +29,27 @@ void bubble_sort( int arr[]  ,int size)
 			cout << arr[x] << "  ";
 		}
 	}
-}
+}*/
 
+void bubble_sort( int arr[]  ,int size)
+{
+	for(int i=0;i<size-1 ;i++)
+	{
+		for(int j=0;j<size-i-1 ;j++)
+		{
+			if(arr[j] > arr [j+1])
+			{			
+				swap(arr[j] ,arr[j+1]);
+			}
+			
+		}
+		cout <<endl<< "i:"<<i <<" arr: ";
+		for(int x=0;x<10 ;x++)
+		{
+			cout << arr[x] << "  ";
+		}
+	}
+}
 int recursion_sum(int val)
 {
 	if (val == 1)
